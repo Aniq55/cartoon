@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+
+{% block content %}
+
+
+
+<p style="text-align: center; font-size: 60px; color:yellow;margin-top:250px;padding-bottom: 20px;">Register/Login</p>
+	
+	<!-- login for facebook starts.. -->
+<div class="container" align="center" style="padding-bottom:110px;">
+	<div class="row">
+	<p>
+		<button onclick="window.location='{% url 'social:begin' 'facebook' %}?next={{ request.path }}';" class="btn-lg btn-facebook" style="height:60px;width:400px;">
+		<i  class="fa fa-facebook"></i> | Login with Facebook
+		</button>
+	</p>
+	</div>
+
+	<!-- login for google starts.. -->
+	<div class="row">
+	<p>
+		<button onclick="window.location='{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}';" class="btn-lg btn-google" style="height:60px;width:400px;"><i class="fa fa-google p2"></i> | Login with Google
+		</button>
+	</p>
+	</div>
+</div>
+{% endblock %}
