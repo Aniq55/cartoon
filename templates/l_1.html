@@ -1,0 +1,18 @@
+{% extends base.html %}
+{% block content %}
+  <div id="title">
+    <h2>Sliding Puzzle</h2>
+  </div>
+  <div id="slider">
+    <form>
+      <label>Easy</label>
+      <input type="range" id="scale" value="4" min="3" max="5" step="1">
+      <label>Hard</label>
+    </form>
+    <br>
+  </div>
+  <div id="main" class="main">
+    <canvas id="puzzle" width="480px" height="480px"></canvas>
+  </div>
+{% endblock %}
+

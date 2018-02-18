@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
-from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -40,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'level',
     'social_django',
+    
 ]
 
 MIDDLEWARE = [
@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'cartoon.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT'),
+        'NAME': 'cartoon',
+        'USER': 'root',
+        'PASSWORD': '12345678',
+        'HOST': '',
+        'PORT':'',
     }
 }
 
@@ -172,12 +172,3 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.user.user_details',
     'social_core.pipeline.social_auth.associate_by_email',
 )
-
-
-# See the following link for more info:
-# https://gist.github.com/Compro-Prasad/a0ab288af13b10912ed4d45a4b593542
-SOCIAL_AUTH_UID_LENGTH = 190
-SOCIAL_AUTH_NONCE_SERVER_URL_LENGTH = 190
-SOCIAL_AUTH_ASSOCIATION_SERVER_URL_LENGTH = 190
-SOCIAL_AUTH_ASSOCIATION_HANDLE_LENGTH = 190
-SOCIAL_AUTH_EMAIL_LENGTH = 190

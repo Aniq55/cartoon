@@ -5,10 +5,11 @@
 
 
 
-<p style="text-align: center; font-size: 60px; color:yellow;margin-top:250px;padding-bottom: 20px;">Register/Login</p>
+	<p style="text-align: center; font-size: 60px; color:yellow;margin-top:250px;padding-bottom: 20px;">Register/Login</p>
 	
 	<!-- login for facebook starts.. -->
-<div class="container" align="center" style="padding-bottom:110px;">
+
+	<div class="container" align="center" style="padding-bottom:110px;">
 	<div class="row">
 	<p>
 		<button onclick="window.location='{% url 'social:begin' 'facebook' %}?next={{ request.path }}';" class="btn-lg btn-facebook" style="height:60px;width:400px;">
@@ -24,5 +25,7 @@
 		</button>
 	</p>
 	</div>
-</div>
+	</div>
+ 	
+	
 {% endblock %}
