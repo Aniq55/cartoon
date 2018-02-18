@@ -1,0 +1,13 @@
+*~
+\#*
+*.pyc
+*.db
+db.*
+__pycache__
+__pycache__/*
+/*/migrations/00*
+.env
+*.sqlite3
+.DS_Store
+.*~
+.\#*
