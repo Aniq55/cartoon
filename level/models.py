@@ -5,7 +5,7 @@ import datetime
 
 
 class player(models.Model):
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=128)
     max_level = models.IntegerField(default=1)
     score = models.IntegerField(default=0)
@@ -40,7 +40,7 @@ class Notif(models.Model):
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.user.username
