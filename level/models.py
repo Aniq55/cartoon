@@ -5,7 +5,7 @@ import datetime
 
 
 class player(models.Model):
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User,on_delete=models.DO_NOTHING)
     name = models.CharField(max_length=128)
     max_level = models.IntegerField(default=1)
     score = models.IntegerField(default=0)
@@ -14,3 +14,18 @@ class player(models.Model):
 
     def __str__(self):
         return self.name
+
+class level(models.Model):
+    l_number = models.IntegerField()
+    image1 = models.ImageField(upload_to = 'images',default='images/level1.jpg')
+    image2 = models.ImageField(upload_to = 'images',default='images/level1.jpg')
+    text = models.TextField()
+    answer = models.CharField(max_length=200)
+    numuser = models.IntegerField(default=0)
+    accuracy = models.FloatField(default=0)
+    wrong = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.text
+
+

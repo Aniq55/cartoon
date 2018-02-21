@@ -9,5 +9,4 @@ urlpatterns = [
 	#url(r'^level/page_1/$',views.page_1,name="page_1"),
 	 url('', include('django.contrib.auth.urls', namespace='auth')),
     url(r'^auth/', include('social_django.urls', namespace='social')), 
-
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

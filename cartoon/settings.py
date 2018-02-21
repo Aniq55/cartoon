@@ -83,12 +83,8 @@ WSGI_APPLICATION = 'cartoon.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'cartoon',
-        'USER': 'root',
-        'PASSWORD': '12345678',
-        'HOST': '',
-        'PORT':'',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'sqlite.db',
     }
 }
 

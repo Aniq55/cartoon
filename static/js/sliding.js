@@ -1,11 +1,11 @@
 var context = document.getElementById('puzzle').getContext('2d');
 
 var img = new Image();
-img.src = 'http://www.brucealderman.info/Images/dimetrodon.jpg';
+img.src =  "{{ level.image_1 }}";
 img.addEventListener('load', drawTiles, false);
 
 var boardSize = document.getElementById('puzzle').width;
-var tileCount = document.getElementById('scale').value;
+var tileCount = 4
 
 var tileSize = boardSize / tileCount;
 
@@ -97,4 +97,3 @@ function checkSolved() {
   }
   solved = flag;
 }
-
